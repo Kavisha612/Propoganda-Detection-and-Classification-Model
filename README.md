@@ -2,7 +2,7 @@
 
 A lightweight, end-to-end NLP pipeline for detecting propagandistic text spans and classifying 14 distinct propaganda techniques in news articles.
 
-## 🚀 Features
+## Features
 
 - **Span Detection**  
   Trains a binary TF-IDF → Logistic Regression model to flag propaganda spans (F1 ↑ from 0.40 → 0.75 on 200 articles / 2 000+ annotations).  
@@ -12,14 +12,32 @@ A lightweight, end-to-end NLP pipeline for detecting propagandistic text spans a
 - **Batch Processing & Analysis**  
   CLI scripts for corpus ingestion, label generation, model training, evaluation, and exporting a serialized `task2_ensemble_technique_model.pkl`.  
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - **Core:** Python, pandas, NumPy  
 - **ML & NLP:** scikit-learn, TfidfVectorizer, LogisticRegression  
 - **Imbalance Handling:** imbalanced-learn (SMOTE-ENN)  
-- **Persistence:** pickle  
+- **Persistence:** pickle
 
-## 📂 Repo Structure
+## Installation
+### 1. Clone and enter directory
+git clone https://github.com/Kavisha612/propoganda_detection_model.git
+cd propoganda_detection_model
+### 2. Create and activate virtualenv
+python3 -m venv venv
+source venv/bin/activate
+### Install Dependencies
+pip install -r requirements.txt
+
+## Usage
+### 1. Generate labels files
+python compile.py
+python test_dataset.py
+### 2. Run the pipeline
+python final_implementation.py
+
+
+## Repo Structure
 
 ```text
 .
@@ -36,3 +54,6 @@ A lightweight, end-to-end NLP pipeline for detecting propagandistic text spans a
     ├── pilot_train_articles/      # Raw .txt articles
     ├── pilot_train-task1-SI.labels
     └── pilot_train-task2-TC.labels
+
+
+
