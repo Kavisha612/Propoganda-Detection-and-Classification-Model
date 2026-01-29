@@ -55,6 +55,8 @@ python final_implementation.py
 ├── test_dataset.py          # Validate / augment annotation files
 ├── final_implementation.py  # Main pipeline: feature extraction, training, evaluation
 ├── requirements.txt         # Python dependencies
+├── pilot_train-task1-SI.labels
+├── pilot_train-task2-TC.labels
 └── data/
     ├── pilot_train_articles/      # Raw .txt articles
     ├── pilot_train-task1-SI.labels
