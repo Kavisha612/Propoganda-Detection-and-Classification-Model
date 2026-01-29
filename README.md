@@ -31,8 +31,13 @@ pip install -r requirements.txt
 
 ## Usage
 ### 1. Generate labels files
+If using original database
+```
 python compile.py
 python test_dataset.py
+```
+Otherwise the generated label files are already in the repo
+
 ### 2. Run the pipeline
 python final_implementation.py
 
